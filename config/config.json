@@ -1,0 +1,9 @@
+{
+  "default_output_directory": "data",
+  "date_format": "%Y-%m-%d",
+  "account_naming": {
+    "chase": "chase{account_number}",
+    "discover": "discover{account_number}"
+  },
+  "supported_banks": ["chase", "discover"]
+}
