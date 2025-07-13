@@ -20,7 +20,6 @@ def parse_chase_csv(file_path):
     try:
         # Read the CSV file
         df = pd.read_csv(file_path, encoding='utf-8', index_col=False)
-        print(df.head(2))  # Display first two rows for debugging
         
         # Determine which format the file is based on columns
         if 'Details' in df.columns and 'Posting Date' in df.columns and 'Balance' in df.columns:
@@ -93,16 +92,12 @@ def parse_discover_csv(file_path):
         pd.DataFrame: Standardized DataFrame with transaction data
     """
     try:
-        # Read the CSV file
         df = pd.read_csv(file_path, encoding='utf-8')
-        
-        # Common column names in Discover statements
-        # Expected columns: Trans. Date,Post Date,Description,Amount,Category
         
         # Standardize column names
         column_mapping = {
             'Trans. Date': 'Date',
-            'Transaction Date': 'Date',
+            # 'Transaction Date': 'Date',
             'Post Date': 'PostDate',
             'Description': 'Description',
             'Category': 'Category',

@@ -1,11 +1,28 @@
+# Environment variables
 .env
+.env.*
 
-venv/*
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
 
+# Python bytecode
 *.pyc
 __pycache__/
 *.pyo
 *.pyd
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Local databases
 *.db
 *.sqlite3
 *.log
+
+# Data files
+*.csv
